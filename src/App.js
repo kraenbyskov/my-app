@@ -19,24 +19,21 @@ function App() {
   return (
     <Router>
       <Header />
-      <Container>
-        <Switch>
-          <Route path="/About">
-            <About />
-          </Route>
-          <Route path="/Contact">
-            <Contact />
-          </Route>
-          <Route path="/Galleri">
-            <Galleri />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-
-        <Footer />
-      </Container>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/About">
+          <About />
+        </Route>
+        <Route path="/Contact">
+          <Contact />
+        </Route>
+        <Route path="/Galleri">
+          <Galleri />
+        </Route>
+      </Switch>
+      <Footer />
     </Router>
   );
 }
